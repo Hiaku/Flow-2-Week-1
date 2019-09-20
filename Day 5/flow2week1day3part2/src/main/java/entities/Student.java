@@ -29,7 +29,8 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Student.findAll", query = "SELECT s FROM Student s"),
     @NamedQuery(name = "Student.findById", query = "SELECT s FROM Student s WHERE s.id = :id"),
     @NamedQuery(name = "Student.findByFirstname", query = "SELECT s FROM Student s WHERE s.firstname = :firstname"),
-    @NamedQuery(name = "Student.findByLastname", query = "SELECT s FROM Student s WHERE s.lastname = :lastname")})
+    @NamedQuery(name = "Student.findByLastname", query = "SELECT s FROM Student s WHERE s.lastname = :lastname"),
+    @NamedQuery(name = "Student.studentCount", query = "SELECT count(s) FROM Student s")})
 public class Student implements Serializable {
 
     private static final long serialVersionUID = 1L;
